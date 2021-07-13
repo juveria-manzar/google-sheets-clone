@@ -63,6 +63,7 @@ body{
 .grid{
   height: 76%;
   overflow: auto;
+  position: relative;
   background-color: white;
 }
 
@@ -75,13 +76,16 @@ body{
   height: 30px;
   width: 30px;
   position: fixed;
-  z-index: 1;
+  left: 0;
   top: 20vh;
   background-color: gray;
 }
 
 .row-number-section{
   display: inline-block;
+  position: fixed;
+  top: calc(20vh + 30px);
+  left: 0;
 }
 
 .row-number{
@@ -116,4 +120,25 @@ body{
   color: white;
   border: none;
   border-right: 1px solid;
+}
+
+.cell-section{
+  height: calc(76vh - 30px);
+  width: calc(100vw - 30px);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  overflow: auto;
+}
+
+.cell{
+  width: 80px;
+  height: 30px;
+  border: 0.5px solid;
+  flex-shrink: 0;
+}
+
+.row{
+  display: flex;
+  
 }
