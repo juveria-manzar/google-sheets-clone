@@ -1,95 +1,97 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
 
-.container{
+.container {
   height: 100vh;
-  background-color: aqua;
 }
 
-.title-bar{
+.title-section {
+  outline: none;
   height: 4%;
+  background-color: #27ae60;
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: none;
-  background-color: #27ae60;
+  color: white;
 }
 
-.menu-bar{
+.menu-bar-section {
   height: 4%;
-  display: flex;
   background-color: white;
-  color: black;
+  display: flex;
+  align-items: center;
 }
 
-.menu-bar div{
-  padding: 3px;
+.menu-bar-section div {
+  position: relative;
   margin-left: 20px;
   color: black;
 }
-.menu-option-sections{
+
+.menu-options-section {
+  display: flex;
   height: 8%;
   background-color: #2ecc71;
 }
 
-.formula-section{
+.formula-section {
   height: 4%;
   display: flex;
 }
 
-.formula-section .selected-cell-div{
+.formula-section .selected-cell-div {
   height: 100%;
-  width: 30%;
-  background-color: white;
-  border: 1px solid;
+  width: 20%;
   display: flex;
   justify-content: center;
+  background-color: white;
+  border: 1px solid;
   align-items: center;
 }
 
-.formula-section input{
+.formula-section input {
   display: block;
   width: 80%;
   height: 100%;
   border: 1px solid;
   outline: none;
 }
-.grid{
+
+.grid {
   height: 76%;
   overflow: auto;
   position: relative;
-  background-color: white;
 }
 
-.sheet-section{
+.sheets-section {
   height: 4%;
   background-color: #2ecc71;
 }
 
-.blank-corner{
+.blank-corner {
   height: 30px;
   width: 30px;
-  position: fixed;
-  left: 0;
-  top: 20vh;
   background-color: gray;
+  position: fixed;
+  top: 20vh;
+  left: 0;
 }
 
-.row-number-section{
+.row-number-section {
   display: inline-block;
   position: fixed;
   top: calc(20vh + 30px);
   left: 0;
-  /* z-index: -10; */
+  z-index: -10;
 }
 
-.row-number{
+.row-number {
   height: 30px;
   width: 30px;
   background-color: #27ae60;
@@ -101,17 +103,17 @@ body{
   border-bottom: 1px solid;
 }
 
-.column-tag-section{
+.column-tag-section {
   height: 30px;
-  top: 20vh;
-  display: flex;
-  left: 30px;
   position: fixed;
-  background-color: rgb(155, 35, 75);
-  /* z-index: -10; */
+  background: bisque;
+  top: 20vh;
+  left: 30px;
+  display: flex;
+  z-index: -10;
 }
 
-.column-tag{
+.column-tag {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,12 +121,12 @@ body{
   flex-shrink: 0;
   height: 30px;
   background-color: #27ae60;
-  color: white;
   border: none;
   border-right: 1px solid;
+  color: white;
 }
 
-.cell-section{
+.cell-section {
   height: calc(76vh - 30px);
   width: calc(100vw - 30px);
   position: absolute;
@@ -133,18 +135,44 @@ body{
   overflow: auto;
 }
 
-.cell{
+.cell {
   width: 80px;
   height: 30px;
-  border: 0.5px solid;
+  border: 1px solid;
   flex-shrink: 0;
   outline: none;
 }
 
-.cell-selected{
+.cell-selected {
   border: 2px solid rgb(60, 60, 218);
 }
 
-.row{
+.row {
   display: flex;
+}
+
+.menu-options-section div {
+  border: 1px solid;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bold-italics-underline,
+.align-cell-content,
+.cell-color-options {
+  width: 23%;
+}
+
+.font-type-size {
+  width: 31%;
+}
+
+.file-drop-down {
+  position: absolute !important;
+  background-color: white;
+  left: -20px;
+  width: 4rem;
+  text-align: center;
 }
